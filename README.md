@@ -30,7 +30,7 @@ follow the following steps:
   
   python manage.py migrate
   
-  python manage.py runserver 0.0.0.0:8086
+  python manage.py runserver 0.0.0.0:8087
   
 
 5. Save the file and run the docker compose up command again
