@@ -1,0 +1,16 @@
+# banknote_authentication_autoML
+It is an automated ML project on the banknote_authentication dataset to predict the probability of the positive class.
+We are using tpot to choose the best model on our data. Then, we calibrate the model using Isotonic regression function.
+The choice of the function used to calibrate the model is done using the brier_score_loss function. (See the notebook).
+We also deployed this ML model using Django. A post request will be sent with a datapoint to predict the probability of the 
+positive class. The return message of the request will contain the output of the probability. 
+
+## Guide to test the project:
+1. Clone the project to your directory
+2. Open the CMD or powershell in this directory
+3. Open the WSL terminal
+4. Write the following command: docker compose up
+5. Open postman and add a new post request
+6. The url for the post request is: http://localhost:8087/banknote_authentication_api/datasets/prediction
+7. Write your request body as json
+8. Send the request
