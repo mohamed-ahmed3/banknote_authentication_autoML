@@ -25,8 +25,12 @@ follow the following steps:
 4. Write the following in the file:
    
   #!/bin/sh
+  
   python manage.py makemigrations
+  
   python manage.py migrate
+  
   python manage.py runserver 0.0.0.0:8086
+  
 
 5. Save the file and run the docker compose up command again
