@@ -1,0 +1,14 @@
+version: '3'
+services:
+  automl_service:
+    build:
+      context: .
+    ports:
+      - 8087:8087
+    volumes:
+      - ./banknote_authentication_api/migrations:/app/banknote_authentication_api/migrations
+      - ./:/app
+    environment:
+      - DEBUG=True
+volumes:
+  pgdata:
